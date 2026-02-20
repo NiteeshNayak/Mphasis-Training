@@ -60,5 +60,4 @@ public class College {
 	public String toString() {
 		return "College [id=" + id + ", c_name=" + c_name + "]";
 	}
-
 }
