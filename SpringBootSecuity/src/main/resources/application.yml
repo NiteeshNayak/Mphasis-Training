@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: SpringBootSecuity
+server:
+  port: 4567
+
