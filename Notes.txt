@@ -1,0 +1,191 @@
+web application
+	static
+		HTML/css
+	dynamic
+		servlet,jsp
+
+
+view - html/css,jsp
+controller - servlet
+model - pojo,data
+
+
+https://gitlab.com/cmsanju/mla_1102_java.git
+
+java drivers
+	jdbc-odbc
+	native api
+	network protocol
+	thin - pure java driver
+
+we can use try catch inside finally
+
+try is followed by catch or finally
+
+
+ServletContext - Data is global, only one time object creation for entire application, 
+
+ServletConfig - Data is local, it will create object for every request, 
+
+session tracking - 1> Cookie
+		   2> Hidden form fields
+		   3> Url rewriting
+		   4> HttpSession
+
+Servlet Filters -> Usages - authorization, authentication, encoding, decoding, compression, transactions
+
+Listeners -> event response generating
+
+Limitation of servlet ->
+Maintenance and deployment problems are more
+we write presentation and application logic ,, it gives discomfort
+does not provide automatic page compilation
+
+
+small app - jsp,  jsp -> .java -> .class -> run
+
+large app - servlet, .java -> .class -> run
+
+Async Servlet
+
+Load on startup _> web.xml,   welcome page
+
+Java servlet authentication and authorization
+		
+
+BotDetails efficientBot(){
+	Map<Integer, List<Bot>> res = new TreeMap<>();
+
+	for(Bot temp : botList){
+		int rtio = temp.getVolume()/temp.getArea();
+		res.put(rtio,res.getOrDefault(rtio,new ArrayList<>).add(temp));
+	
+	}
+
+
+Hibernate ORM ->      java application -> Object -> ORM -> Database
+
+	JNDI,JTA,JDBC -> Internal Api used by hibernate
+
+
+	Database independence
+	implements JPI
+
+	advantage :
+		Open source and lightweight
+		fast performance
+		database independent query
+		automatic table creation
+		simplifies complex joins
+		provides query statistics from database
+		
+	common annotation -> 
+		OneToOne - Innerjoin
+		ManyToOne - left join
+		OneToMany - right Join
+		ManyToMany -full join
+		
+
+	session Factory -> second level caching - we have to enable manually - data in this cache is available for entire application - > other mechanism for 2 level cache are - HashTable, EHCache, OSCache, 
+	session object -> first level caching - enabled by default
+
+
+Strategy - > 
+	read Only
+	read/write
+	nonstrict read/write
+	transactional
+
+trancientc <-> persistent <-> detached
+
+Granularity 
+	single table strategy
+	joined table strategy - the base table contains common attributes and subclass table contains subclass specific attributes with foreign keys linking them
+	Table per class strategy - Each concrete class in the hierarchy has its own table with all attributes from the class and its superclasses.
+
+N + 1 problem in hibernate
+	
+	
+
+Mapping -> one to one , one to many, many to one, many to many
+
+
+how to avoid circular bean creation exception
+
+
+
+
+
+spring Framework ->
+
+Features ->  IoC container - Bean Factory, Application Context
+	     Dependency Injection - 
+	     Aspect Oriented Programming Language - supports transaction management, cross cutting , security
+	     Data access objects
+	     Supports transaction management
+	     Spring MVC & Web flux
+	     Supports Testing
+	     Integration capability
+Advantage ->
+	    Light Weight
+	    Loose Coupling
+	    Improves testability due to modular code
+	    Layered Architecture
+	    pojo based development
+
+
+Default bean scope in spring framework - Singleton scope
+other scope - prototype -> creates objects for every request
+	      session scope -> once session expired bean gets destroyed
+	      request scope
+	      global session
+
+Bean lifecycle - container started -> Bean instantiated -> dependencies injected -> custom init() -> custom utility method -> custom destroy() 
+
+what is auto wiring in spring -> byType, byName, constructor
+
+primary and qualifier annotation
+
+setter is a partially dependency injection
+constructor injection -> complete dependency injection
+
+
+Spring AOP and AspectJ
+
+	cross cutting concerns ->
+
+
+hibernate objects:
+	transient 
+	persistent
+	detached
+
+propagation in transactional 
+
+
+Web service - follows SOA architecture, types of web services -> SOAP -> rpc style, document style ,	RESTful -> jersey, RESTeasy
+API -
+
+SpringBootApplication - component scan , springBootconfiguration - to create bean, enableautoconfiguration
+
+Springboot -> basically extension of spring which eliminated the boilerplate configuration required for setting up a spring application.
+Supports RAD feature
+Spring framework + embedded http servers(tomcat , jetty, undertow) - xml <bean> Configuration or @configuration = SpringBoot
+
+default return statement for controller -> is modelAndView
+
+Restcontroller = responseBody + controller
+
+@RequestBody = converts metadata to java objects with the help of httpMessageConverter class
+
+dispatcherServlet - IMP
+
+
+Excption 
+
+WebFluxSecurity - for reactive programming to achieve concurrent programming
+
+csrf = disable   , disabling the cross site request forgery for web application
+
+
+
