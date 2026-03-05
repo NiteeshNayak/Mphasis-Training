@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: SpringBootCloudAPIGateway
+server:
+  port: 9135
+
